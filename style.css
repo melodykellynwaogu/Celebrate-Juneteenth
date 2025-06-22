@@ -241,115 +241,87 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  background: linear-gradient(135deg,rgba(0,123,255,0.12) 50%, rgba(255,203,5,0.09) 100%),
-      url('https://i.postimg.cc/5NsxPYtY/pattern-light.jpg');
+  height: 100vh;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+  /* Blue gradient background, no image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 3rem 1.2rem;
-  position: relative;
-  overflow: hidden;
-}
-#subscribe::after {
-  content: "";
-  position: absolute;
-  top: -30px; right: -40px;
-  width: 160px; height: 160px;
-  background: radial-gradient(circle, #007bff30 0%, transparent 80%);
-  z-index: 0;
-  pointer-events: none;
-}
-#mailing {
-  text-align: center;
-  z-index: 1;
-  width: 100%;
+  padding: 2rem;
 }
 
-/* Form Styles */
 #form {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f4f6f8 80%, #e3f0ff 100%);
-  border: 2.8px solid #007BFF;
-  backdrop-filter: blur(14px);
-  padding: 3.7rem 5.3rem;
-  border-radius: 30px;
-  box-shadow: 0 14px 38px 0 rgba(0, 123, 255, 0.21), 0 4px 8px rgba(0,0,0,0.11);
-  max-width: 600px;
+  background: rgba(255, 255, 255, 0.92);
+  /* Subtle white glass effect */
+  backdrop-filter: blur(10px);
+  padding: 3rem 4rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  max-width: 500px;
   width: 100%;
-  margin: 40px auto;
+  margin: auto;
   text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-#form::before {
-  content: '';
-  position: absolute;
-  top: -23px; left: 50%;
-  transform: translateX(-50%);
-  width: 62px; height: 62px;
-  background: linear-gradient(135deg, #007BFF 60%, #ffcb05 100%);
-  border-radius: 50%;
-  box-shadow: 0 2px 14px rgba(0,123,255,0.13);
-  z-index: 0;
+  border: 2.5px solid #007BFF;
 }
 
 #form h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #007BFF;
-  margin-bottom: 0.9rem;
-  font-weight: 900;
-  letter-spacing: 1.4px;
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 2px 12px #007bff29;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
 }
 
 #form input[type="email"] {
-  padding: 1.15rem 1.3rem;
-  border: 1.6px solid #bcdcff;
-  border-radius: 9px;
-  font-size: 1.18rem;
+  padding: 1.1rem 1.3rem;
+  border: 1.5px solid #bcdcff;
+  border-radius: 8px;
+  font-size: 1.1rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   background: #f7fbff;
-  transition: box-shadow 0.21s, border-color 0.21s;
-  box-shadow: 0 2px 8px rgba(0,123,255,0.10);
 }
 
 #form input[type="email"]:focus {
   border-color: #007BFF;
-  box-shadow: 0 0 0 3px #007bff2a;
+  box-shadow: 0 0 0 2px #007bff33;
   outline: none;
 }
 
 #form input[type="submit"] {
-  padding: 1rem 2.7rem;
+  padding: 1rem 2.2rem;
   border: none;
   background: linear-gradient(90deg, #007BFF 80%, #ffcb05 100%);
   color: #fff;
   font-weight: bold;
-  border-radius: 12px;
-  font-size: 1.17rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.12);
-  transition: background 0.31s, transform 0.19s, box-shadow 0.19s;
-  margin-top: 0.7rem;
-  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 #form input[type="submit"]:hover {
   background: linear-gradient(90deg, #0056b3 80%, #ffcb05 100%);
-  transform: translateY(-2px) scale(1.06);
-  box-shadow: 0 7px 24px #007bff38;
+  transform: translateY(-1px) scale(1.03);
 }
 
+@media (max-width: 768px) {
+  #subscribe {
+    padding: 1.5rem 0.5rem;
+    height: auto;
+  }
+  #form {
+    padding: 1.3rem;
+  }
+  #form h2 {
+    font-size: 1.2rem;
+  }
+}
 /* Footer */
 footer {
   background: linear-gradient(90deg, #007BFF 70%, #6610f2 100%);
